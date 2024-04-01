@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/assets/form.css">
+    <link rel="stylesheet" href="/assets/card.css">
+
+    <title>Blogs</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link fs-5 fw-bolder" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link fs-5 fw-bolder" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item active">
+                    <% if(username) { %>
+                        <a href="/addblog" class="nav-link fs-5 fw-bolder">Add Blog</a>
+                        <% } else { %>
+                            <% } %>
+
+                </li>
+            </ul>
+            <div class="users d-flex gap-3">
+                <% if(username) { %>
+                    <a href="/logout" class="btn btn-outline-dark">LogOut</a>
+                    <% } else { %>
+                        <a href="/login" class='btn btn-outline-dark px-3 py-2 fw-bolder'>Login</a>
+                        <a href="/register" class='btn btn-outline-dark px-3 py-2 fw-bolder'>Register</a>
+                        <% } %>
+            </div>
+        </div>
+    </nav>
